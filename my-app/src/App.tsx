@@ -4,7 +4,10 @@ import RenderArrayDataIntoListsAndTables from "./package/RenderArrayDataIntoList
 const App = () => {
   return (
     <div>
-      <RenderArrayDataIntoListsAndTables />
+      <RenderArrayDataIntoListsAndTables data={[{ name: 'John', surname: 'Smith', age: 42 },
+      { name: 'Adam', surname: 'Smith', gender: 'male' },]} propertyNames={[
+        'a', 'b'
+      ]} />
     </div>
   )
 }
