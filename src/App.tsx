@@ -1,10 +1,11 @@
 import React from 'react'
-import Test from './components/Tree/test'
+import Test from './components/Accordion/test'
+
 export const App = () => {
   return (
 
     <div>
-      <Test></Test>
+      <Test ></Test>
     </div>
   )
 }
