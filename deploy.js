@@ -1,4 +1,4 @@
-import child from 'child_process'
+const child = require('child_process')
 setInterval(() => {
     console.log('run')
     child.exec('sh cr.sh', function (err, sto) {
