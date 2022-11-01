@@ -3,6 +3,7 @@ import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index c
 import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
 import { CountDown } from "./components/Visual视觉效果渲染/CountDown"
 import { FileDrop } from "./components/Visual视觉效果渲染/FileDrop"
+import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 
 
 export const App = () => {
@@ -67,8 +68,6 @@ export const App = () => {
         height: '500px',
         border: '1px solid'
       }}
-        //   div.addEventListener("dragover", handleDrag);
-        //   div.addEventListener("drop", handleDrop);
         onClick={(e) => {
           console.log(e, 'asmdlkam')
         }}
@@ -94,6 +93,11 @@ export const App = () => {
         }}
       >
         test
+      </div>
+      <div id="mailto">
+        <Mailto email="foo@bar.baz" subject="Hello" body="Hello world!">
+          Mail me!
+        </Mailto>
       </div>
     </div>
   )
