@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 export function Collapse({ collapsed, children }) {
-
     const [isCollapsed, setIsCollapsed] = useState(collapsed);
-
-
     return (
         <div>
             <button
@@ -13,7 +10,9 @@ export function Collapse({ collapsed, children }) {
                 {isCollapsed ? "显示" : "隐藏"} 内容
             </button>
             <div
-
+                style={{
+                    display: isCollapsed ? 'none' : 'block'
+                }}
             >
                 {children}
             </div>
