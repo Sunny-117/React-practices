@@ -17,6 +17,13 @@ export const App = () => {
       </div>
       <div id="demo">
 
+        <Carousel
+          carouselItems={[
+            <div>carousel item 1</div>,
+            <div>carousel item 2</div>,
+            <div>carousel item 3</div>
+          ]}
+        />
       </div>
     </div>
   )
