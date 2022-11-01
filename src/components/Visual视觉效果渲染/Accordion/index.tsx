@@ -18,8 +18,9 @@ export function Accordion(props) {
 
     return <div>
         {items.map(item => {
-            return <AccordionItem label={item.label} index={item.index}>
-                {item.children}
+            console.log(item)
+            return <AccordionItem label={item.props.label} index={item.props.index}>
+                {item.props.children}
             </AccordionItem>
         })}
     </div>
