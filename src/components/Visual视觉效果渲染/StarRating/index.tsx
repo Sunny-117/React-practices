@@ -20,7 +20,9 @@ export function StarRating(props) {
         }
         setSelection(val);
     };
-    type NewType = React.MouseEventHandler<HTMLButtonElement>
+
+    // 学到的TS知识
+    type NewType = React.MouseEvent<HTMLElement>
 
     return (
         <div
