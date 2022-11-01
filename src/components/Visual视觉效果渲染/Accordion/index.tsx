@@ -18,6 +18,7 @@ export function Accordion(props) {
     const [i, setI] = useState(props.defaultIndex)
     const items = props.children
     const changeItem = (index) => {
+        console.log(index)
         setI(index)
     }
     return <div>
