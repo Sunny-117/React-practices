@@ -17,7 +17,9 @@ export function Accordion(props) {
     const items = props.children
     return <div>
         {items.map(item => {
-            return <AccordionItem label={item.props.label} index={item.props.index}>
+            return <AccordionItem
+                isCollapsed={item.props.index === i ? true : false}
+                label={item.props.label} index={item.props.index}>
                 {item.props.children}
             </AccordionItem>
         })}
