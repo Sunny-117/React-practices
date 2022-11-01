@@ -1,3 +1,5 @@
+import { Modal } from "antd"
+import { useState } from "react"
 import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/Accordion"
 import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index copy"
 import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
@@ -7,6 +9,7 @@ import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 
 
 export const App = () => {
+  const [isModal, setModal] = useState(false);
   return (
 
     <div>
@@ -104,6 +107,16 @@ export const App = () => {
         <Mailto email="foo@bar.baz" subject="Hello" body="Hello world!">
           Mail me!
         </Mailto>
+      </div>
+      <div id="modal">
+        <button onClick={() => setModal(true)}>显示模态框</button>
+        <Modal
+          isVisible={isModal}
+          title="标题"
+          content={<p>正文</p>}
+          footer={<button onClick={() => setModal(false)}>关闭模态框</button>}
+          onClose={() => setModal(false)}
+        />
       </div>
     </div>
   )
