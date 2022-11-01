@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Star({ marked, starId }) {
+    console.log(starId)
     return (
         <span star-id={starId} style={{ color: "#ff9933" }} role="button">
             {/* 空星，实星 */}

@@ -122,9 +122,8 @@ export const App = () => {
         margin: '100px'
       }}>
         <div>
-          <StarRating />
           <StarRating rating={2} />
-        </div>;
+        </div>
       </div>
     </div>
   )
