@@ -24,7 +24,7 @@ export function StarRating(props) {
         <div
             onMouseOut={() => hoverOver(null)}
             // 点击选中分数
-            onClick={(event: any) => {
+            onClick={(event: React.FormEvent<HTMLInputElement>) => {
                 // TODO: 这里的类型错误
                 setRating(event.target.getAttribute("star-id") || rating)
             }

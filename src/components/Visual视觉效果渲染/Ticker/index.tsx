@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 export function Ticker(props) {
     // 当前 ticker ，默认 0
-    const [ticker, setTicker] = React.useState(0);
+    const [ticker, setTicker] = useState(0);
     let interval = null;
 
     // 开始计时
