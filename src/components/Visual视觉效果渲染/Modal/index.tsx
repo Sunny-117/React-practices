@@ -20,7 +20,9 @@ export function Modal({ isVisible = false, title, content, footer, onClose }) {
     }
     // 控制模态框显示
     return !isVisible ? null : (
-        <div className={styles["modal"]} onClick={onClose}>
+        <div className={styles["modal"]} onClick={onClose} style={{
+            border: '1px solid'
+        }}>
             <div
                 className={styles["modal-dialog"]}
                 onClick={e => e.stopPropagation()}
