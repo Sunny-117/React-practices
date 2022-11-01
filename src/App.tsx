@@ -7,6 +7,7 @@ import { FileDrop } from "./components/Visual视觉效果渲染/FileDrop"
 import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 import { Modal } from "./components/Visual视觉效果渲染/Modal"
 import { StarRating } from "./components/Visual视觉效果渲染/StarRating"
+import { TabItem, Tabs } from "./components/Visual视觉效果渲染/Tabs"
 
 
 export const App = () => {
@@ -124,6 +125,16 @@ export const App = () => {
         <div>
           <StarRating rating={2} />
         </div>
+      </div>
+      <div className="tabs">
+        <Tabs defaultIndex="1" onTabClick={console.log}>
+          <TabItem label="A" index="1">
+            A 选修卡的内容
+          </TabItem>
+          <TabItem label="B" index="2">
+            B 选修卡的内容
+          </TabItem>
+        </Tabs>
       </div>
     </div>
   )
