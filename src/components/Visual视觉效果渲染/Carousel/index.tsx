@@ -9,7 +9,6 @@ export function Carousel({ carouselItems }) {
     })
     return (
         <div>
-            {i}
             {carouselItems[i]}
         </div>
     )
