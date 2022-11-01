@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/Accordion"
-import { Carousel } from "./components/Visual视觉效果渲染/Carousel"
+import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index copy"
 
 
 export const App = () => {
