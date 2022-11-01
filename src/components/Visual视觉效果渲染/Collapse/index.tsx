@@ -1,25 +1,12 @@
 import { useState } from "react";
 
-export function Collapse(props) {
-    const [isCollapsed, setIsCollapsed] = useState(props.collapsed);
+export function Collapse({ collapsed }) {
+    const [isCollapsed, setIsCollapsed] = useState(collapsed);
 
-    const style = {
-        collapsed: {
-            display: "none"
-        },
-        expanded: {
-            display: "block"
-        },
-        buttonStyle: {
-            display: "block",
-            width: "100%"
-        }
-    };
 
     return (
         <div>
             <button
-                style={style.buttonStyle}
                 onClick={() => setIsCollapsed(!isCollapsed)}
             >
                 {isCollapsed ? "显示" : "隐藏"} 内容

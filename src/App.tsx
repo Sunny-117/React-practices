@@ -7,7 +7,7 @@ export const App = () => {
   return (
 
     <div>
-      <div id="Accordion">
+      {/* <div id="Accordion">
         <Accordion defaultIndex="1" onItemClick={console.log}>
           <AccordionItem label="A" index="1">
             Lorem ipsum
@@ -26,12 +26,11 @@ export const App = () => {
             <div>carousel item 3</div>
           ]}
         />
-      </div>
+      </div> */}
       <hr />
       <div className="collapse">
         <Collapse>
           <h1>This is a collapse</h1>
-          <p>Hello world!</p>
         </Collapse>
       </div>
     </div>
