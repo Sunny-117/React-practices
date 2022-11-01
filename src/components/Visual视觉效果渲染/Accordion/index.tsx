@@ -18,7 +18,9 @@ export function Accordion(props) {
     const [i, setI] = useState(props.defaultIndex)
     const items = props.children
     const changeItem = (index) => {
-        console.log(index)
+        if (typeof props.onItemClick === 'function') {
+            props.onItemClick()
+        }
         setI(index)
     }
     return <div>
