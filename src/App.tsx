@@ -117,6 +117,14 @@ export const App = () => {
           onClose={() => setModal(false)}
         />
       </div>
+      <div className="star" style={{
+        margin: '100px'
+      }}>
+        <div>
+          <StarRating />
+          <StarRating rating={2} />
+        </div>;
+      </div>
     </div>
   )
 }
