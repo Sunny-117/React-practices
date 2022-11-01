@@ -82,6 +82,11 @@ export const App = () => {
           e.preventDefault();
           e.stopPropagation();
         }}
+        onDragOver={e => {
+          console.log(e, 'onDragOver')
+          e.preventDefault();
+          e.stopPropagation();
+        }}
         onDrop={(e) => {
           e.preventDefault();
           e.stopPropagation();
