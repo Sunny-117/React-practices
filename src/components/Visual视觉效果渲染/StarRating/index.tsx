@@ -10,7 +10,7 @@ function Star({ marked, starId }) {
 }
 
 export function StarRating(props) {
-    // 分数显示
+    // rating: 实际得分
     const [rating, setRating] = useState(
         typeof props.rating == "number" ? props.rating : 0
     );
