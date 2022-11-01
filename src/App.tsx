@@ -58,18 +58,18 @@ export const App = () => {
         width: '400px',
         height: '500px',
         border: '1px solid'
-      }}>
+      }}
+        onClick={(e) => {
+          console.log(e, 'asmdlkam')
+        }}
+        onDragEnter={e => {
+          console.log('onDragEnter', e)
+        }}
+        onDrop={(e) => {
+          console.log('onDrop', e)
+        }}
+      >
         test
-
-        <div
-          onDragEnter={e => {
-            console.log('onDragEnter', e)
-          }}
-          onDrop={(e) => {
-            console.log('onDrop', e)
-          }}>
-
-        </div>
       </div>
     </div>
   )
