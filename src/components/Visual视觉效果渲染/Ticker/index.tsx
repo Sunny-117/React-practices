@@ -1,30 +1,36 @@
 import { useState } from "react";
 
-export function Ticker(props) {
-    // 当前 ticker ，默认 0
-    const [ticker, setTicker] = useState(0);
-    let interval: any = null;
+class Ticker extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { ticker: 0 };
+        // 无需渲染的变量，不用写在 state
+        this.interval = null;
+    }
 
-    // 开始计时
-    const tick = () => {
-        reset();
-        interval = setInterval(() => {
-            if (ticker < props.times) setTicker(ticker + 1);
-            else clearInterval(interval);
-        }, props.interval);
+    tick = () => {
+        this.reset();
+        this.interval = setInterval(() => {
+            if (this.state.ticker < this.props.times) {
+                this.setState(({ ticker }) => ({ ticker: ticker + 1 }));
+            } else {
+                clearInterval(this.interval);
+            }
+        }, this.props.interval);
     };
 
-    // 重置为0，并清除计时器
-    const reset = () => {
-        setTicker(0);
-        clearInterval(interval);
+    reset = () => {
+        this.setState({ ticker: 0 });
+        clearInterval(this.interval);
     };
 
-    return (
-        <div>
-            <span style={{ fontSize: 100 }}>{ticker}</span>
-            <button onClick={tick}>Tick!</button>
-            <button onClick={reset}>Reset</button>
-        </div>
-    );
+    render() {
+        return (
+            <div>
+                <span style={{ fontSize: 100 }}>{this.state.ticker}</span>
+                <button onClick={this.tick}>Tick!</button>
+                <button onClick={this.reset}>Reset</button>
+            </div>
+        );
+    }
 }
