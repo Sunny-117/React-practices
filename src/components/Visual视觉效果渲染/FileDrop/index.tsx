@@ -14,6 +14,7 @@ export function FileDrop(props) {
     };
 
     const handleDragIn = e => {
+        console.log(e, 'handleDragIn')
         e.preventDefault();
         e.stopPropagation();
         dragCounter++;
