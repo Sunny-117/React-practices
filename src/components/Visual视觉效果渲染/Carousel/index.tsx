@@ -4,7 +4,7 @@ export function Carousel({ carouselItems }) {
     let [i, setI] = useState(0)
     useEffect(() => {
         setInterval(() => {
-            setI(i)
+            setI((i + 1) % carouselItems.length)
         }, 1000)
     }, [i])
 
