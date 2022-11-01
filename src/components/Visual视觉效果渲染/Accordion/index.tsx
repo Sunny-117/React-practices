@@ -10,10 +10,9 @@ export function AccordionItem(props) {
         },
         buttonStyle: {
             display: "block",
-            width: "100%"
+            // width: "100%"
         }
     };
-
     return (
         <div>
             {/* 按钮，点击传入的 handleClick */}
