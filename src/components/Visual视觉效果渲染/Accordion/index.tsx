@@ -15,6 +15,6 @@ export function AccordionItem(props) {
 export function Accordion(props) {
 
     return <div>
-        {props.children}
+        <AccordionItem />
     </div>
 }
