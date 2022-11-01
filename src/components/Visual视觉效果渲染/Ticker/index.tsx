@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 class Ticker extends React.Component {
@@ -34,3 +35,4 @@ class Ticker extends React.Component {
         );
     }
 }
+export default Ticker
