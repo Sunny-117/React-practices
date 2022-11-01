@@ -1,11 +1,18 @@
 
 import React from 'react'
 
-export function AccordionItem(props) {
+export function AccordionItem({ label, index, children }) {
 
-}
-export function Accordion({ defaultIndex, onItemClick }) {
     return (
-        <div>index</div>
+        <div>
+            {children}
+        </div>
+    )
+}
+export function Accordion({ defaultIndex, onItemClick, children }) {
+    return (
+        <div>
+            {children}
+        </div>
     )
 }
