@@ -2,6 +2,7 @@ import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/
 import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index copy"
 import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
 import { CountDown } from "./components/Visual视觉效果渲染/CountDown"
+import { FileDrop } from "./components/Visual视觉效果渲染/FileDrop"
 
 
 export const App = () => {
@@ -46,6 +47,10 @@ export const App = () => {
         margin: '100px'
       }}>
         <CountDown hours="0" minutes="0" seconds="2" />
+      </div>
+      <hr />
+      <div className="fileDrop">
+        <FileDrop handleDrop={console.log} />;
       </div>
     </div>
   )
