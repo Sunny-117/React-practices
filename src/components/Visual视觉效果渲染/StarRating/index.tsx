@@ -20,7 +20,7 @@ export function StarRating(props) {
         }
         setSelection(val);
     };
-    type NewType = MouseEvent<HTMLInputElement>;
+    type NewType = MouseEvent<HTMLAllCollection>;
 
     return (
         <div
