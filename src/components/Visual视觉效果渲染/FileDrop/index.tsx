@@ -5,7 +5,7 @@ export function FileDrop(props) {
     const [filename, setFilename] = React.useState("");
 
     // 创建组件引用
-    let dropRef = React.createRef();
+    let dropRef: any = React.createRef();
     let dragCounter = 0;
 
     const handleDrag = e => {

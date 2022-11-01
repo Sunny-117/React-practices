@@ -49,8 +49,10 @@ export const App = () => {
         <CountDown hours="0" minutes="0" seconds="2" />
       </div>
       <hr />
-      <div className="fileDrop">
-        <FileDrop handleDrop={console.log} />;
+      <div className="fileDrop" style={{
+        margin: '100px'
+      }}>
+        <FileDrop handleDrop={console.log} />
       </div>
     </div>
   )
