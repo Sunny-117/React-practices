@@ -18,7 +18,9 @@ export function FileDrop(props) {
         e.preventDefault();
         e.stopPropagation();
         dragCounter++;
-        if (e.dataTransfer.items && e.dataTransfer.items.length > 0) setDrag(true);
+        if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+            setDrag(true)
+        }
     };
 
     const handleDragOut = e => {
