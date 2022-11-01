@@ -94,7 +94,13 @@ export const App = () => {
       >
         test
       </div>
-      <div id="mailto">
+      <div id="mailto" style={
+        {
+          width: '100px',
+          height: '100px',
+          background: 'red'
+        }
+      }>
         <Mailto email="foo@bar.baz" subject="Hello" body="Hello world!">
           Mail me!
         </Mailto>
