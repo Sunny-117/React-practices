@@ -8,12 +8,11 @@ function Star({ marked, starId }) {
         </span>
     );
 }
-
 export function StarRating(props) {
     // rating: 实际得分
     const [rating, setRating] = useState(props.rating);
+    // selection: hover时候的分数
     const [selection, setSelection] = useState(0);
-    console.log(selection, 'asdnkj')
     const hoverOver = event => {
         let val = 0;
         if (event && event.target && event.target.getAttribute("star-id")) {
