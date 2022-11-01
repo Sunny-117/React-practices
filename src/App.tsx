@@ -71,7 +71,6 @@ export const App = () => {
           e.preventDefault();
           e.stopPropagation();
           console.log('onDrop', e.dataTransfer)
-
         }}
       >
         test
