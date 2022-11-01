@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function Star({ marked, starId }) {
-    console.log(starId)
     return (
         <span star-id={starId} style={{ color: "#ff9933" }} role="button">
             {/* 空星，实星 */}
@@ -15,7 +14,6 @@ export function StarRating(props) {
     const [rating, setRating] = useState(
         typeof props.rating == "number" ? props.rating : 0
     );
-    // 鼠标移入效果
     const [selection, setSelection] = useState(0);
     const hoverOver = event => {
         let val = 0;
@@ -32,9 +30,6 @@ export function StarRating(props) {
                 // TODO: 这里的类型错误
                 setRating(event.target.getAttribute("star-id") || rating)
             }
-                // onClick={(event) => {
-                //     setRating(event.target.getAttribute("star-id") || rating)
-                // }
             }
             onMouseOver={hoverOver}
         >
