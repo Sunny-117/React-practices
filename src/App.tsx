@@ -67,8 +67,6 @@ export const App = () => {
         height: '500px',
         border: '1px solid'
       }}
-        // div.addEventListener("dragenter", handleDragIn);
-        //   div.addEventListener("dragleave", handleDragOut);
         //   div.addEventListener("dragover", handleDrag);
         //   div.addEventListener("drop", handleDrop);
         onClick={(e) => {
@@ -79,7 +77,12 @@ export const App = () => {
           e.stopPropagation();
           console.log('onDragEnter', e)
         }}
-        onDragEnd={(e) => {
+        onDragLeave={e => {
+          console.log(e, 'onDragLeave')
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+        onDrop={(e) => {
           e.preventDefault();
           e.stopPropagation();
           console.log('onDrop', e.dataTransfer)
