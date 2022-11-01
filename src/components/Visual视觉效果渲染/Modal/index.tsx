@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Modal.css";
 
 export function Modal({ isVisible = false, title, content, footer, onClose }) {
-    React.useEffect(() => {
+    useEffect(() => {
         // 监听事件
         document.addEventListener("keydown", keydownHandler);
         // 取消监听
