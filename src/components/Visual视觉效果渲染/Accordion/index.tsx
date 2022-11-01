@@ -14,10 +14,13 @@ export function AccordionItem(props) {
 
 export function Accordion(props) {
     const items = props.children
+    console.log(items)
 
     return <div>
         {items.map(item => {
-            return <AccordionItem label={item.label} />
+            return <AccordionItem label={item.label} index={item.index}>
+                {item.children}
+            </AccordionItem>
         })}
     </div>
 }
