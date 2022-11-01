@@ -26,7 +26,9 @@ export function Carousel(props) {
     const { carouselItems, ...rest } = props;
     return (
         <div
-            style={style.carousel}>
+            style={{
+                position: "relative"
+            }}>
             {carouselItems.map((item, index) => {
                 // 激活就显示，否则隐藏
                 const activeStyle = active === index ? style.visible : {};

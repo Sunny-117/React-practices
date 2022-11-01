@@ -1,4 +1,5 @@
 import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/Accordion"
+import { Carousel } from "./components/Visual视觉效果渲染/Carousel"
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
           </AccordionItem>
         </Accordion>
       </div>
+      <hr />
       <div id="Carousel">
         <Carousel
           carouselItems={[
