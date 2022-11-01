@@ -1,6 +1,7 @@
 import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/Accordion"
 import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index copy"
 import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
+import { CountDown } from "./components/Visual视觉效果渲染/CountDown"
 
 
 export const App = () => {
@@ -41,6 +42,9 @@ export const App = () => {
         </Collapse>
       </div>
       <hr />
+      <div className="CountDown">
+        <CountDown hours="1" minutes="45" />;
+      </div>
     </div>
   )
 }
