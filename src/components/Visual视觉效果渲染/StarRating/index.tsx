@@ -28,7 +28,7 @@ export function StarRating(props) {
             onMouseOut={() => hoverOver(null)}
             // 点击选中分数
             onClick={
-                (event: Event) => {
+                (event: MouseEvent) => {
                     setRating(event.target.getAttribute("star-id") || rating)
                 }
             }
