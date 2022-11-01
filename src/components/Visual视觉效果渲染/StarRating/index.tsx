@@ -20,7 +20,7 @@ export function StarRating(props) {
         }
         setSelection(val);
     };
-    type NewType = MouseEvent<HTMLAllCollection>;
+    type NewType = React.MouseEventHandler<HTMLButtonElement>
 
     return (
         <div
