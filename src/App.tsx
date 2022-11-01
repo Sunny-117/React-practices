@@ -1,5 +1,6 @@
 import { Accordion, AccordionItem } from "./components/Visual视觉效果渲染/Accordion"
 import { Carousel } from "./components/Visual视觉效果渲染/Carousel/index copy"
+import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
 
 
 export const App = () => {
@@ -25,6 +26,13 @@ export const App = () => {
             <div>carousel item 3</div>
           ]}
         />
+      </div>
+      <hr />
+      <div className="collapse">
+        <Collapse>
+          <h1>This is a collapse</h1>
+          <p>Hello world!</p>
+        </Collapse>
       </div>
     </div>
   )
