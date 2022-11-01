@@ -8,6 +8,7 @@ import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 import { Modal } from "./components/Visual视觉效果渲染/Modal"
 import { StarRating } from "./components/Visual视觉效果渲染/StarRating"
 import { TabItem, Tabs } from "./components/Visual视觉效果渲染/Tabs"
+import { Ticker } from "./components/Visual视觉效果渲染/Ticker"
 
 
 export const App = () => {
@@ -137,6 +138,11 @@ export const App = () => {
             B
           </TabItem>
         </Tabs>
+      </div>
+      <div className="ticker" style={{
+        margin: '100px'
+      }}>
+        <Ticker times={5} interval={1000} />
       </div>
     </div>
   )
