@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 
 export function Carousel({ carouselItems }) {
-    const [i, setI] = useState(0)
+    let [i, setI] = useState(0)
     useEffect(() => {
+        setInterval(() => {
+            i++
+            if (i === 2) {
+                i = 0;
+            }
+            setI(i)
+        }, 500)
 
-
-    }, [i])
+    }, [])
 
     return (
         <div>
