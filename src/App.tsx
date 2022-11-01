@@ -54,6 +54,14 @@ export const App = () => {
       }}>
         <FileDrop handleDrop={console.log} />
       </div>
+      <div draggable style={
+        {
+          width: '100px',
+          height: '100px',
+          background: 'red'
+        }
+
+      }></div>
       <div style={{
         width: '400px',
         height: '500px',
