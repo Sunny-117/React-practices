@@ -1,4 +1,38 @@
 
+import React from "react";
+export function AccordionItem(props) {
+    const style = {
+        collapsed: {
+            display: "none"
+        },
+        expanded: {
+            display: "block"
+        },
+        buttonStyle: {
+            display: "block",
+            width: "100%"
+        }
+    };
+
+    return (
+        <div>
+            {/* 按钮，点击传入的 handleClick */}
+            <button style={style.buttonStyle} onClick={() => props.handleClick()}>
+                {props.label}
+            </button>
+            {/* 控制显示、隐藏状态 */}
+            <div
+                className="collapse-content"
+                style={props.isCollapsed ? style.collapsed : style.expanded}
+                aria-expanded={props.isCollapsed}
+            >
+                {/* 内容 */}
+                {props.children}
+            </div>
+        </div>
+    );
+}
+
 export function Accordion(props) {
     // 目前显示的 index
     const [bindIndex, setBindIndex] = React.useState(props.defaultIndex);
