@@ -63,12 +63,15 @@ export const App = () => {
           console.log(e, 'asmdlkam')
         }}
         onDragEnter={e => {
+          e.preventDefault();
+          e.stopPropagation();
           console.log('onDragEnter', e)
         }}
         onDrop={(e) => {
-          console.log('onDrop', e.dataTransfer)
           e.preventDefault();
           e.stopPropagation();
+          console.log('onDrop', e.dataTransfer)
+
         }}
       >
         test
