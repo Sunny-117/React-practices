@@ -18,11 +18,12 @@ export function Accordion(props) {
     const [i, setI] = useState(props.defaultIndex)
     const items = props.children
     const changeItem = (index) => {
-
+        setI(index)
     }
     return <div>
-        {items.map(item => {
+        {items.map((item, j) => {
             return <AccordionItem
+                key={j}
                 handleClick={() => {
                     changeItem(item.props.index)
                 }}
