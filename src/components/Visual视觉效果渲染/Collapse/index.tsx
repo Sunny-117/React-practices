@@ -1,20 +1,38 @@
 import { useState } from "react";
 
-export function Collapse({ collapsed, children }) {
-    const [isCollapsed, setIsCollapsed] = useState(collapsed);
+export function Collapse(props) {
+    console.log(props)
+    const [isCollapsed, setIsCollapsed] = useState(props.collapsed);
 
+    const style = {
+        collapsed: {
+            display: "none"
+        },
+        expanded: {
+            display: "block"
+        },
+        buttonStyle: {
+            display: "block",
+            width: "100%"
+        }
+    };
 
     return (
         <div>
             <button
+                style={style.buttonStyle}
                 onClick={() => setIsCollapsed(!isCollapsed)}
             >
                 {isCollapsed ? "显示" : "隐藏"} 内容
             </button>
             <div
                 className="collapse-content"
+                // 决定显示和折叠
+                style={isCollapsed ? style.collapsed : style.expanded}
+                // aria-expanded 是给 Screen Reader 用来 判断当前元素状态的辅助属性
+                aria-expanded={isCollapsed}
             >
-                {children}
+                {props.children}
             </div>
         </div>
     );
