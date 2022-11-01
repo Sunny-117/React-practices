@@ -20,13 +20,15 @@ export function StarRating(props) {
         }
         setSelection(val);
     };
+    type NewType = MouseEvent<HTMLInputElement>;
+
     return (
         <div
             onMouseOut={() => hoverOver(null)}
             // 点击选中分数
-            onClick={(event: MouseEvent<HTMLInputElement>) => {
+            onClick={(event: NewType) => {
                 //  这里的类型错误
-                setRating(event.target.getAttribute("star-id") || rating)
+                setRating((event.target as HTMLInputElement).getAttribute("star-id") || rating)
             }
             }
             onMouseOver={hoverOver}
