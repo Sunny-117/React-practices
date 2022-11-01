@@ -5,7 +5,7 @@ export function AccordionItem(props) {
     return <div className="item">
         <button>{props.label}</button>
         <div style={{
-            // display: props.index === i ? 'block' : 'none'
+            display: props.isCollapsed ? 'block' : 'none'
         }}>
             {props.children}
         </div>
