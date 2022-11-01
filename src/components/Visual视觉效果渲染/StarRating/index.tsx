@@ -17,13 +17,13 @@ export function StarRating(props) {
     const [selection, setSelection] = useState(0);
     const hoverOver = event => {
         let val = 0;
-        if (event && event.target && event.target.getAttribute("star-id"))
+        if (event && event.target && event.target.getAttribute("star-id")) {
             val = event.target.getAttribute("star-id");
+        }
         setSelection(val);
     };
     return (
         <div
-            // 鼠标移入效果
             onMouseOut={() => hoverOver(null)}
             // 点击选中分数
             onClick={(event: any) => {
