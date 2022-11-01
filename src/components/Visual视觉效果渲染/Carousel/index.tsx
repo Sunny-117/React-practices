@@ -1,7 +1,12 @@
 import React from 'react'
 
 export function Carousel({ carouselItems }) {
+
     return (
-        <div>index</div>
+        <div>
+            {carouselItems.map((Item, index) => {
+                return <Item />
+            })}
+        </div>
     )
 }
