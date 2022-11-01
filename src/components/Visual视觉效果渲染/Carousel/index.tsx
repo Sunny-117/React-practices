@@ -1,4 +1,6 @@
-function Carousel(props) {
+import React from "react";
+
+export function Carousel(props) {
     // active 当前轮播激活的索引
     const [active, setActive] = React.useState(0);
     const style = {
@@ -23,7 +25,8 @@ function Carousel(props) {
     });
     const { carouselItems, ...rest } = props;
     return (
-        <div style={style.carousel}>
+        <div
+            style={style.carousel}>
             {carouselItems.map((item, index) => {
                 // 激活就显示，否则隐藏
                 const activeStyle = active === index ? style.visible : {};

@@ -15,8 +15,7 @@ export const App = () => {
           </AccordionItem>
         </Accordion>
       </div>
-      <div id="demo">
-
+      <div id="Carousel">
         <Carousel
           carouselItems={[
             <div>carousel item 1</div>,
