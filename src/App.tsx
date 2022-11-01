@@ -29,7 +29,7 @@ export const App = () => {
       </div> */}
       <hr />
       <div className="collapse">
-        <Collapse>
+        <Collapse collapsed={false}>
           <h1>This is a collapse</h1>
           <p>Hello world!</p>
         </Collapse>

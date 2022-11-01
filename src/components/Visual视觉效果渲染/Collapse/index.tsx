@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function Collapse(props) {
-    console.log(props)
+    console.log(props.collapsed)
     const [isCollapsed, setIsCollapsed] = useState(props.collapsed);
 
     const style = {
