@@ -54,7 +54,11 @@ export const App = () => {
       }}>
         <FileDrop handleDrop={console.log} />
       </div>
-      <div>
+      <div style={{
+        width: '400px',
+        height: '500px',
+        border: '1px solid'
+      }}>
         test
 
         <div onDrop={(e) => {
