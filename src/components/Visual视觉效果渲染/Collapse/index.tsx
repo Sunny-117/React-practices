@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Collapse({ collapsed }) {
+export function Collapse({ collapsed, children }) {
     const [isCollapsed, setIsCollapsed] = useState(collapsed);
 
 
@@ -13,12 +13,8 @@ export function Collapse({ collapsed }) {
             </button>
             <div
                 className="collapse-content"
-                // 决定显示和折叠
-                style={isCollapsed ? style.collapsed : style.expanded}
-                // aria-expanded 是给 Screen Reader 用来 判断当前元素状态的辅助属性
-                aria-expanded={isCollapsed}
             >
-                {props.children}
+                {children}
             </div>
         </div>
     );
