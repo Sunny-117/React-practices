@@ -61,9 +61,13 @@ export const App = () => {
       }}>
         test
 
-        <div onDrop={(e) => {
-          console.log(e)
-        }}>
+        <div
+          onDragEnter={e => {
+            console.log('onDragEnter', e)
+          }}
+          onDrop={(e) => {
+            console.log('onDrop', e)
+          }}>
 
         </div>
       </div>
