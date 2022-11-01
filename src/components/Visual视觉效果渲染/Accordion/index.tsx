@@ -17,12 +17,14 @@ export function AccordionItem(props) {
 export function Accordion(props) {
     const [i, setI] = useState(props.defaultIndex)
     const items = props.children
-    console.log(props)
+    const changeItem = (index) => {
+
+    }
     return <div>
         {items.map(item => {
             return <AccordionItem
                 handleClick={() => {
-                    props.onItemClick()
+                    changeItem(item.props.index)
                 }}
                 isCollapsed={item.props.index === i ? true : false}
                 label={item.props.label} index={item.props.index}>
