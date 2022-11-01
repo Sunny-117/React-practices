@@ -19,7 +19,7 @@ export function Accordion(props) {
     const items = props.children
     const changeItem = (index) => {
         if (typeof props.onItemClick === 'function') {
-            props.onItemClick()
+            props.onItemClick(index)
         }
         setI(index)
     }

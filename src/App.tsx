@@ -5,7 +5,7 @@ export const App = () => {
   return (
 
     <div>
-      <Accordion defaultIndex="1" onItemClick={console.log(222)}>
+      <Accordion defaultIndex="1" onItemClick={console.log}>
         <AccordionItem label="A" index="1">
           Lorem ipsum
         </AccordionItem>
