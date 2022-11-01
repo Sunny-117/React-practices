@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./Modal.css";
 
 export function Modal({ isVisible = false, title, content, footer, onClose }) {
