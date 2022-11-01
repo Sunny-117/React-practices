@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-export function AccordionItem({ label, index, children }) {
+export function AccordionItem({ label, index, children, isCollapsed }) {
 
     return (
         <div>
