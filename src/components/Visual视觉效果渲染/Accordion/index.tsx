@@ -3,7 +3,9 @@ import { useState } from "react"
 export function AccordionItem(props) {
 
     return <div className="item">
-        <button>{props.label}</button>
+        <button onClick={() => {
+            props.handleClick()
+        }}>{props.label}</button>
         <div style={{
             display: props.isCollapsed ? 'block' : 'none'
         }}>
@@ -19,6 +21,9 @@ export function Accordion(props) {
     return <div>
         {items.map(item => {
             return <AccordionItem
+                handleClick={() => {
+                    props.onItemClick()
+                }}
                 isCollapsed={item.props.index === i ? true : false}
                 label={item.props.label} index={item.props.index}>
                 {item.props.children}
