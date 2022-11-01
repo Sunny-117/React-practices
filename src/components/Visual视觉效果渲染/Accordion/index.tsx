@@ -38,23 +38,23 @@ export function Accordion(props) {
     // 在本地环境，没有压缩，函数名就是组件名 AccordionItem
     // 线上压缩后，函数名没改为了单个字母，自然就无法判断了
     // 解决方案：跟它本身 .name 比较即可
-    // const items = props.children.filter(
-    //     item => {
-    //         // console.log(item.type.name)//AccordionItem
-    //         return item.type.name === AccordionItem.name
-    //     }
-    // );
-    // console.log(items)
+    const items = props.children.filter(
+        item => {
+            // console.log(item.type.name)//AccordionItem
+            return item.type.name === AccordionItem.name
+        }
+    );
 
     return (
         <div className="wrapper">
-            {props.children.map(({ props }) => (
-                <AccordionItem
-                    isCollapsed={bindIndex === props.index}
-                    label={props.label}
-                    handleClick={() => changeItem(props.index)}
-                    children={props.children}
-                />
+            {items.map(({ props }) => (
+                <p>123</p>
+                // <AccordionItem
+                //     isCollapsed={bindIndex === props.index}
+                //     label={props.label}
+                //     handleClick={() => changeItem(props.index)}
+                //     children={props.children}
+                // />
             ))}
         </div>
     );

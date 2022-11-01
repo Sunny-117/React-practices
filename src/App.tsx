@@ -12,9 +12,6 @@ export const App = () => {
         <AccordionItem label="B" index="2">
           Dolor sit amet
         </AccordionItem>
-        <div>
-          123
-        </div>
       </Accordion>
     </div>
   )
