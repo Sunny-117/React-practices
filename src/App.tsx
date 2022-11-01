@@ -66,7 +66,7 @@ export const App = () => {
           console.log('onDragEnter', e)
         }}
         onDrop={(e) => {
-          console.log('onDrop', e)
+          console.log('onDrop', e.dataTransfer)
           e.preventDefault();
           e.stopPropagation();
         }}
