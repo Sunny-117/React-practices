@@ -54,6 +54,15 @@ export const App = () => {
       }}>
         <FileDrop handleDrop={console.log} />
       </div>
+      <div>
+        test
+
+        <div onDrop={(e) => {
+          console.log(e)
+        }}>
+
+        </div>
+      </div>
     </div>
   )
 }
