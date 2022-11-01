@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export function Carousel({ carouselItems }) {
+    const [i, setI] = useState(0)
 
     return (
         <div>
-            {carouselItems.map((Item, index) => {
-                return <Item />
-            })}
+            {carouselItems[0]}
         </div>
     )
 }
