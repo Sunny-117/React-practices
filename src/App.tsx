@@ -7,7 +7,9 @@ export const App = () => {
   return (
 
     <div>
-      <div id="Accordion">
+      <div id="Accordion" style={{
+        margin: '100px'
+      }}>
         <Accordion defaultIndex="1" onItemClick={console.log}>
           <AccordionItem label="A" index="1">
             Lorem ipsum
@@ -18,7 +20,9 @@ export const App = () => {
         </Accordion>
       </div>
       <hr />
-      <div id="Carousel">
+      <div id="Carousel" style={{
+        margin: '100px'
+      }}>
         <Carousel
           carouselItems={[
             <div>carousel item 1</div>,
@@ -28,12 +32,15 @@ export const App = () => {
         />
       </div>
       <hr />
-      <div className="collapse">
+      <div className="collapse" style={{
+        margin: '100px'
+      }}>
         <Collapse collapsed={false}>
           <h1>This is a collapse</h1>
           <p>Hello world!</p>
         </Collapse>
       </div>
+      <hr />
     </div>
   )
 }
