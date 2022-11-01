@@ -39,7 +39,10 @@ export function Accordion(props) {
     // 线上压缩后，函数名没改为了单个字母，自然就无法判断了
     // 解决方案：跟它本身 .name 比较即可
     const items = props.children.filter(
-        item => item.type.name === AccordionItem.name
+        item => {
+            console.log(item.type)
+            return item.type.name === AccordionItem.name
+        }
     );
 
     return (
