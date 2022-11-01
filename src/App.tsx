@@ -6,6 +6,7 @@ import { CountDown } from "./components/Visual视觉效果渲染/CountDown"
 import { FileDrop } from "./components/Visual视觉效果渲染/FileDrop"
 import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 import { Modal } from "./components/Visual视觉效果渲染/Modal"
+import { StarRating } from "./components/Visual视觉效果渲染/StarRating"
 
 
 export const App = () => {
