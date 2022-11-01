@@ -67,6 +67,8 @@ export const App = () => {
         }}
         onDrop={(e) => {
           console.log('onDrop', e)
+          e.preventDefault();
+          e.stopPropagation();
         }}
       >
         test
