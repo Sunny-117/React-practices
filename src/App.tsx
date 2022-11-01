@@ -75,7 +75,7 @@ export const App = () => {
           e.stopPropagation();
           console.log('onDragEnter', e)
         }}
-        onDrop={(e) => {
+        onDragEnd={(e) => {
           e.preventDefault();
           e.stopPropagation();
           console.log('onDrop', e.dataTransfer)
