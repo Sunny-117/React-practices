@@ -7,16 +7,12 @@ export function AccordionItem(props) {
         },
         expanded: {
             display: "block"
-        },
-        buttonStyle: {
-            display: "block",
-            // width: "100%"
         }
     };
     return (
         <div>
             {/* 按钮，点击传入的 handleClick */}
-            <button style={style.buttonStyle} onClick={() => props.handleClick()}>
+            <button onClick={() => props.handleClick()}>
                 {props.label}
             </button>
             {/* 控制显示、隐藏状态 */}
