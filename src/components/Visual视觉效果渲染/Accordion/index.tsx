@@ -1,5 +1,4 @@
 export function AccordionItem(props) {
-
     return <div className="item">
         <button>{props.label}</button>
         {props.children}
