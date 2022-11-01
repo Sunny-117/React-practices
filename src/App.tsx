@@ -5,6 +5,7 @@ import { Collapse } from "./components/Visual视觉效果渲染/Collapse"
 import { CountDown } from "./components/Visual视觉效果渲染/CountDown"
 import { FileDrop } from "./components/Visual视觉效果渲染/FileDrop"
 import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
+import { Modal } from "./components/Visual视觉效果渲染/Modal"
 
 
 export const App = () => {
