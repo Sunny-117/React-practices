@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-function AccordionItem() {
+export function AccordionItem(label, index) {
 
 }
-export default function Accordion({ defaultIndex, onItemClick }) {
+export function Accordion({ defaultIndex, onItemClick }) {
     return (
         <div>index</div>
     )
