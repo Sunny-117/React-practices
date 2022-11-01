@@ -1,5 +1,5 @@
 import React from "react";
-export function CountDown({ hours = 0, minutes = 0, seconds = 0 }) {
+export function CountDown({ hours = 0, minutes = 0, seconds = 0 }: any) {
     const [paused, setPaused] = React.useState(false);
     const [over, setOver] = React.useState(false);
     // time 默认值是一个 object

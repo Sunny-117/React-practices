@@ -43,7 +43,7 @@ export const App = () => {
       </div>
       <hr />
       <div className="CountDown">
-        <CountDown hours="1" minutes="45" />;
+        <CountDown hours="1" minutes="2" />
       </div>
     </div>
   )
