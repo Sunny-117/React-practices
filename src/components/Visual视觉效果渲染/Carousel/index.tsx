@@ -5,8 +5,8 @@ export function Carousel({ carouselItems }) {
     useEffect(() => {
         setInterval(() => {
             setI((i + 1) % carouselItems.length)
-        }, 1000)
-    }, [i])
+        }, 500)
+    }, [])
 
     return (
         <div>
