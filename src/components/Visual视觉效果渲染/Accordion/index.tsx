@@ -15,6 +15,7 @@ export function AccordionItem(props) {
 export function Accordion(props) {
     const [i, setI] = useState(props.defaultIndex)
     const items = props.children
+    console.log(props)
     return <div>
         {items.map(item => {
             return <AccordionItem
