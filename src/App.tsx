@@ -126,13 +126,15 @@ export const App = () => {
           <StarRating rating={2} />
         </div>
       </div>
-      <div className="tabs">
+      <div className="tabs" style={{
+        margin: '100px'
+      }}>
         <Tabs defaultIndex="1" onTabClick={console.log}>
           <TabItem label="A" index="1">
-            A 选修卡的内容
+            A
           </TabItem>
           <TabItem label="B" index="2">
-            B 选修卡的内容
+            B
           </TabItem>
         </Tabs>
       </div>
