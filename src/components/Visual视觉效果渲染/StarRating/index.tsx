@@ -11,10 +11,9 @@ function Star({ marked, starId }) {
 
 export function StarRating(props) {
     // rating: 实际得分
-    const [rating, setRating] = useState(
-        typeof props.rating == "number" ? props.rating : 0
-    );
+    const [rating, setRating] = useState(props.rating);
     const [selection, setSelection] = useState(0);
+    console.log(selection, 'asdnkj')
     const hoverOver = event => {
         let val = 0;
         if (event && event.target && event.target.getAttribute("star-id")) {
