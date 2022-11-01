@@ -67,6 +67,10 @@ export const App = () => {
         height: '500px',
         border: '1px solid'
       }}
+        // div.addEventListener("dragenter", handleDragIn);
+        //   div.addEventListener("dragleave", handleDragOut);
+        //   div.addEventListener("dragover", handleDrag);
+        //   div.addEventListener("drop", handleDrop);
         onClick={(e) => {
           console.log(e, 'asmdlkam')
         }}
