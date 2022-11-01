@@ -5,17 +5,14 @@ export function Carousel({ carouselItems }) {
     useEffect(() => {
         setInterval(() => {
             i++
-            if (i === 2) {
-                i = 0;
-            }
             setI(i)
-        }, 500)
+        }, 1000)
 
-    }, [])
+    }, [i])
 
     return (
         <div>
-            {carouselItems[0]}
+            {carouselItems[i]}
         </div>
     )
 }
