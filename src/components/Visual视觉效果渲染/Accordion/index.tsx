@@ -1,11 +1,11 @@
 import { useState } from "react"
 
 export function AccordionItem(props) {
-    const [i, setI] = useState(props.defaultIndex)
+
     return <div className="item">
         <button>{props.label}</button>
         <div style={{
-            display: props.index === i ? 'block' : 'none'
+            // display: props.index === i ? 'block' : 'none'
         }}>
             {props.children}
         </div>
@@ -13,6 +13,7 @@ export function AccordionItem(props) {
 }
 
 export function Accordion(props) {
+    const [i, setI] = useState(props.defaultIndex)
     const items = props.children
     return <div>
         {items.map(item => {
