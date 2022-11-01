@@ -42,7 +42,9 @@ export const App = () => {
         </Collapse>
       </div>
       <hr />
-      <div className="CountDown">
+      <div className="CountDown" style={{
+        margin: '100px'
+      }}>
         <CountDown hours="0" minutes="0" seconds="2" />
       </div>
     </div>
