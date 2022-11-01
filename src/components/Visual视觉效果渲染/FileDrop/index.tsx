@@ -41,7 +41,7 @@ export function FileDrop(props) {
 
     React.useEffect(() => {
         // 监听拖放事件
-        let div = dropRef.current;
+        let div: any = dropRef.current;
         div.addEventListener("dragenter", handleDragIn);
         div.addEventListener("dragleave", handleDragOut);
         div.addEventListener("dragover", handleDrag);
