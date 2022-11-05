@@ -7,6 +7,7 @@ export function AccordionItem(props) {
             props.handleClick()
         }}>{props.label}</button>
         <div style={{
+
             display: props.isCollapsed ? 'block' : 'none'
         }}>
             {props.children}
