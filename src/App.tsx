@@ -13,7 +13,11 @@ export default function App() {
         value={value}
         onChange={(e) => {
           setShow(true)
-          setValue(e.target.value)
+          const newValue = e.target.value
+          if (newValue === '') {
+            setShow(false)
+          }
+          setValue(newValue)
         }}
       />
       <ul>
