@@ -24,7 +24,8 @@ export default function App() {
         {show && list.map((item, index) => {
           if (item.includes(value)) {
             const index = item.indexOf(value)
-
+            const res = item.slice(0, index)
+            console.log(11111, res)
           }
           return <div>1</div>
         })}
