@@ -5,7 +5,7 @@ export default function useSet(interator) {
 
     const methods = {
         add: set.add,
-        addAll: set.delete
+        addAll: set.allAll
     }
     return [
         set,
