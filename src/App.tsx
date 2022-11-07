@@ -22,8 +22,12 @@ export default function App() {
       />
       <ul>
         {show && list.map((item, index) => {
+          console.log(item)
           return <li key={index}>
             {item}
+            {/* <span style={{
+              color: 'red'
+            }}>{item}</span> */}
           </li>
         })}
       </ul>
