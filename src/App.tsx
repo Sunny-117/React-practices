@@ -20,12 +20,13 @@ export default function App() {
     const res: any = await getList(value)
     setList(res)
   }
-  useEffect(() => {
-    (async () => {
-      const res: any = await fetchList()
-      setList(res)
-    })()
-  })
+  // useEffect(() => {
+  //   (async () => {
+  //     const res: any = await fetchList()
+  //     console.log(res)
+  //     setList(res)
+  //   })()
+  // }, [value])
 
   return (
     <div>
