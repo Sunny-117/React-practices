@@ -7,7 +7,7 @@ const getList = (keyWords) => {
       if (Math.random() < 0.5) {
         resolve(['前端1', '前端2', '前端3', '前端3', '前端5', '前端5', '前端6', '前端7',])
       } else {
-        reject('error')
+        reject([])
       }
     }, Math.random() * 1000)
   })
@@ -16,17 +16,18 @@ export default function App() {
   const [value, setValue] = useState('')
   const [list, setList] = useState([])
   const [show, setShow] = useState(false)
-  const fetchList = async (value) => {
-    const res: any = await getList(value)
-    setList(res)
-  }
+
   useEffect(() => {
+    const fetchList = async (value) => {
+      const res: any = await getList(value)
+      setList(res)
+    }
     (async () => {
       const res: any = await fetchList(value)
       console.log(res)
       setList(res)
     })()
-  }, [value, fetchList])
+  }, [value])
 
   return (
     <div>
