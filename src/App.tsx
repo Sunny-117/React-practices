@@ -25,13 +25,14 @@ export default function App() {
           if (item.includes(value)) {
             const index = item.indexOf(value)
             const redStr = item.slice(0, index)
-            const str = item.slice(index)
+
             return <div>
               <span style={{
                 color: 'red'
               }}>{redStr}</span>
             </div>
           }
+          return <span>{item}</span>
 
         })}
       </ul>
