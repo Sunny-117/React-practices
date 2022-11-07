@@ -16,21 +16,21 @@ export default function App() {
   const [value, setValue] = useState('')
   const [list, setList] = useState([])
   const [show, setShow] = useState(false)
-  const fetchList = async () => {
+  const fetchList = async (value) => {
     const res: any = await getList(value)
     setList(res)
   }
-  // useEffect(() => {
-  //   (async () => {
-  //     const res: any = await fetchList()
-  //     console.log(res)
-  //     setList(res)
-  //   })()
-  // }, [value])
+  useEffect(() => {
+    (async () => {
+      const res: any = await fetchList(value)
+      console.log(res)
+      setList(res)
+    })()
+  }, [value, fetchList])
 
   return (
     <div>
-      <input type="text" name="" id=""
+      <input type="text"
         value={value}
         onChange={(e) => {
           setShow(true)
