@@ -24,10 +24,15 @@ export default function App() {
         {show && list.map((item, index) => {
           if (item.includes(value)) {
             const index = item.indexOf(value)
-            const res = item.slice(0, index)
-            console.log(11111, res)
+            const redStr = item.slice(0, index)
+            const str = item.slice(index)
+            return <div>
+              <span style={{
+                color: 'red'
+              }}>{redStr}</span>
+            </div>
           }
-          return <div>1</div>
+
         })}
       </ul>
     </div>
