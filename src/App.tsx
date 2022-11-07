@@ -12,11 +12,12 @@ export default function App() {
       <input type="text" name="" id=""
         value={value}
         onChange={(e) => {
+          setShow(true)
           setValue(e.target.value)
         }}
       />
       <ul>
-        {list.map((item, index) => {
+        {show && list.map((item, index) => {
           return <li key={index}>
             {item}
           </li>
