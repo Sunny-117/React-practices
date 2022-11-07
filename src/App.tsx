@@ -24,8 +24,7 @@ export default function App() {
     <div>
       <input type="text" name="" id=""
         value={value}
-        onChange={async (e) => {
-          await fetchList()
+        onChange={(e) => {
           setShow(true)
           const newValue = e.target.value
           if (newValue === '') {
