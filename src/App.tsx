@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // 实现一个 百度搜索框 （搜索提示）
 
 const getList = (keyWords) => {
@@ -20,6 +20,13 @@ export default function App() {
     const res: any = await getList(value)
     setList(res)
   }
+  useEffect(() => {
+    (async () => {
+      const res: any = await fetchList()
+      setList(res)
+    })()
+  })
+
   return (
     <div>
       <input type="text" name="" id=""
