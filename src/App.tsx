@@ -8,16 +8,13 @@ import { Mailto } from "./components/Visual视觉效果渲染/Mailto"
 import { Modal } from "./components/Visual视觉效果渲染/Modal"
 import { StarRating } from "./components/Visual视觉效果渲染/StarRating"
 import { TabItem, Tabs } from "./components/Visual视觉效果渲染/Tabs"
-import useSet from "./useSet"
+
 // import Ticker from "./components/Visual视觉效果渲染/Ticker"
 // import { Ticker } from "./components/Visual视觉效果渲染/Ticker"
 
 
 export const App = () => {
   const [isModal, setModal] = useState(false);
-  const [set, methods] = useSet([1, 2, 3])
-  console.log(set);
-  console.log(methods)
   /**
    * {
     add(item: T): void;
