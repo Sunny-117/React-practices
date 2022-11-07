@@ -15,12 +15,16 @@ const getList = (keyWords) => {
 export default function App() {
   const [value, setValue] = useState('')
   const [show, setShow] = useState(false)
-
+  const fetchList = async () => {
+    const res = await getList(value)
+    console.log(res)
+  }
   return (
     <div>
       <input type="text" name="" id=""
         value={value}
-        onChange={(e) => {
+        onChange={async (e) => {
+          await fetchList()
           setShow(true)
           const newValue = e.target.value
           if (newValue === '') {
