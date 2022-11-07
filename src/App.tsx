@@ -14,10 +14,11 @@ const getList = (keyWords) => {
 }
 export default function App() {
   const [value, setValue] = useState('')
+  const [list, setList] = useState([])
   const [show, setShow] = useState(false)
   const fetchList = async () => {
-    const res = await getList(value)
-    console.log(res)
+    const res: any = await getList(value)
+    setList(res)
   }
   return (
     <div>
