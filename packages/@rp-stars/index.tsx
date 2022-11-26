@@ -1,7 +1,7 @@
 import React from 'react'
 import Test from './Autocomplete/test'
 
-function PackagesApp() {
+function RpStars() {
     return (
         <div>
             <Test />
@@ -9,4 +9,4 @@ function PackagesApp() {
     )
 }
 
-export default PackagesApp
+export default RpStars
