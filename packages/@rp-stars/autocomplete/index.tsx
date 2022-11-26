@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import axios from 'axios';
 
 
-function SearchResults() {
+
+function Autocomplete() {
     const [data, setData] = useState({ hits: [] });
     const [query, setQuery] = useState('react');
 
@@ -21,7 +24,7 @@ function SearchResults() {
         <>
             <input value={query} onChange={e => setQuery(e.target.value)} />
             <ul>
-                {data.hits.map(item => (
+                {data.hits.map((item: any) => (
                     <li key={item.objectID}>
                         <a href={item.url}>{item.title}</a>
                     </li>
@@ -29,14 +32,6 @@ function SearchResults() {
             </ul>
         </>
     );
-}
-
-function Autocomplete() {
-    return (
-        <div>
-
-        </div>
-    )
 }
 
 export default Autocomplete
