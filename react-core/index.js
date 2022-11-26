@@ -6,5 +6,3 @@ const element = {
     }
 }
 
-
-// 前面插入元素
