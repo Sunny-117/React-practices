@@ -1,0 +1,1 @@
+const element = React.createElement('h1', { title: 'foo' }, 'Hello')
