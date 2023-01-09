@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    [
+      "build-plugin-rax-app",
+      {
+        "targets": ["web"]
+      }
+    ]
+  ],
+  "inlineStyle": false
+}

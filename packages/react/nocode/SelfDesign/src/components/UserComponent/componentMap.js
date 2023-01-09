@@ -1,0 +1,2 @@
+const componentMap = new Map([['Image', 'UserImage'], ['Text', 'UserText'], ['Button', 'UserButton'], ['HorizontalLayout', 'UserLayoutHorizontal'], ['VerticalLayout', 'UserLayoutVertical'], ['PositionLayout', 'UserLayoutPosition']]);
+export default componentMap;
